@@ -81,7 +81,7 @@
                         @elseif($topManagement)
 
 
-                        @if($topManagement)
+                       
 
                         <a class="btn btn-primary" href="{{ route('topManagementResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
                         @elseif($topHumanResource)

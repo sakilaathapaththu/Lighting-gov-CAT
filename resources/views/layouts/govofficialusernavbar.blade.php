@@ -86,7 +86,7 @@
             </div>
         @yield('content')
     </div>
-    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;">
+    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;margin-bottom: -80px">
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-4 col-sm-4">
