@@ -20,7 +20,7 @@
 </head>
 
 <body style="border-color: rgb(46,127,208);color: rgb(255, 255, 255);">
-    <nav class="navbar navbar-expand-md fixed-top" data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
+    <nav class="navbar navbar-expand-md fixed-top" style="background: #C1C2DA;">
         <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2" style="text-align: left;font-family: Poppins, sans-serif;"><img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
                 <ul class="navbar-nav ms-auto"></ul>
@@ -32,7 +32,7 @@
             @yield('content')
     </section>
   
-    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;margin-bottom: -60px;">
+    <footer  id="myFooter" style="background: #C1C2DA;margin-bottom: -60px;">
        
         <div class="container-fluid">
             <div class="row text-center">

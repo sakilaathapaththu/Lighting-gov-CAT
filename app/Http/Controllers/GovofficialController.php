@@ -8,6 +8,7 @@ use App\Models\Govofficial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\GovofficialController;
+use App\Models\Govorganizationname;
 
 class GovofficialController extends Controller
 {
@@ -94,12 +95,13 @@ class GovofficialController extends Controller
     public function edit(string $id)
     {
         $govofficial = Govofficial::find($id);
+        $govnames = Govorganizationname::get();
         $layer=Auth::user()->govofficial->employment_layer;
         if($layer=='cdio'){
             return view('cdio.edit', compact('govofficial'));
         }
         else{
-            return view('govOfficials.edit', compact('govofficial'));
+            return view('govOfficials.edit', compact('govofficial','govnames'));
         }
 
     }
