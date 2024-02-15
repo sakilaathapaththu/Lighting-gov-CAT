@@ -88,6 +88,7 @@
     </div>
     {{-- data-aos="slide-up" data-aos-duration="1000" --}}
 <br><br>
+
     <footer  id="myFooter" style="background: #C1C2DA;">
         <div class="container-fluid">
             <div class="row text-center">

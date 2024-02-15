@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body style="border-color: rgb(46,127,208);color: rgb(255,255,255);">
+<body style="border-color: rgb(46,127,208);color: rgb(255, 255, 255);">
     <nav class="navbar navbar-expand-md fixed-top" data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
         <div class="container-fluid"><a class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2" style="text-align: left;font-family: Poppins, sans-serif;"><img src="{{ asset('img/duallogo-white-icta 1(1).png') }}">
@@ -31,7 +31,9 @@
     <section>
             @yield('content')
     </section>
-    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;">
+  
+    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;margin-bottom: -60px;">
+       
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-4 col-sm-4">
@@ -69,6 +71,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        /* body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+   
+    display:grid;
+  
+}
+*/
+footer {
+    margin-top: auto;
+    
+    
+} 
+    </style>
 </body>
 
 </html>
