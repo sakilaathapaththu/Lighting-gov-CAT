@@ -1,0 +1,203 @@
+.navbar {
+  background: var(--bs-purple);
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 16px;
+    height: 13px;
+}
+#card1{
+    width:470px;
+}
+#card2{
+    width:70%;
+}
+#div1{
+    margin-top:10%
+}
+#div3{
+    margin-top:10%;
+    width:50%;
+}
+#div4{
+    margin-top:10%;
+    /* width:70%; */
+}
+#click{
+    margin-top:80%
+}
+#card3{
+    width:70%
+}
+
+#card4{
+    margin-left: 65%;
+    width: 70%;
+    margin-bottom: 20%;
+}
+
+/* .details{
+    font-size: 20px;
+    color :#000;
+    margin-left : -70px;
+}
+.info{
+    font-size: 20px;
+}
+.general{
+    font-size: 20px;
+}
+.btn{
+    width: 198px;
+    height: 47px;
+    font-size: 18px;
+}
+.img{
+    width :450.3px;
+}
+.h4{
+    margin-top: 500px;
+} */
+/* @media(max-width: 768px){
+    .col{
+        width:1000px;
+    }
+} */
+
+/* [class*="col-"] {
+    width: 100%;
+  } */
+@media screen and (max-width: 600px){
+    
+    #h4{
+        font-size: 14px;
+    }
+    #img{
+        height:15px;
+        width:15px;
+        margin-top:-10px;
+    }
+    #h4-2{
+        font-size: 12px;
+        margin-left:-5%
+    }
+    #gmail{
+        font-size: 12px;
+    }
+    #h3{
+        margin-top:10%;
+        font-size:18px;
+    }
+    #layerButton{
+        margin-bottom:10%;
+    }
+    #mainOp{
+        font-size: 14px;
+        margin-top: 0px
+    }
+    #card1{
+        width:90%
+    }
+    #card2{
+        width:90%;
+    }
+    #h2{
+        font-size:18px;
+    }
+    #h3{
+        font-size:16px;
+    }
+    #h3-1{
+        font-size:20px;
+    }
+    #div1{
+        margin-top:20%
+    }
+    #div2{
+        height:40%
+    }
+    #click{
+        font-size:16px;
+        margin-top:20%
+    }
+    #div3{
+        margin-top:20%;
+        width:80%
+    }
+    #div4{
+        margin-top:20%;
+        /* width:80%; */
+    }
+    #password{
+        font-size:16px
+    }
+    #h1{
+        font-size:20px
+    }
+    #h5{
+        font-size: 14px;
+        /* margin-left: 1%; */
+    }
+    #username{
+        font-size: 14px;
+    }
+    #email{
+        font-size: 14px;
+    }
+    #password{
+        font-size: 14px;
+    }
+    #confirm-password{
+        font-size: 14px;
+    }
+    #h6{
+        font-size: 14px;
+    }
+    #button-1{
+        font-size: 14px;
+    }
+    #h1{
+        font-size: 25px;
+    }
+    #main-box{
+        max-height: 85%;
+        min-width: 90%;
+    }
+    #card3{
+        width:90%
+    }
+    #card4{
+        margin-left: 6%;
+        width:90%
+    }
+    #continue_btn{
+        margin-bottom:3%
+    }
+}
