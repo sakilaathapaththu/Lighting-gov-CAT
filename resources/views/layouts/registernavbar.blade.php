@@ -89,7 +89,7 @@
     {{-- data-aos="slide-up" data-aos-duration="1000" --}}
 <br><br>
 
-    <footer  id="myFooter" style="background: #C1C2DA;">
+    <footer  id="myFooter" style="background: #C1C2DA;margin-bottom: -60px;">
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-4 col-sm-4">
