@@ -17,6 +17,13 @@
                         <div class="col" style="margin-top: 20px;">
                             <a class="btn btn-primary" href="{{ route('topManagementReport') }}" type="button" style="width: 203px;height: 55px;font-size: 20px;font-family: Poppins;background: url(&quot;{{ asset('img/Screenshot (561) 6.png') }}&quot;), var(--bs-body-bg);border-style: none;">Download</a></div>
                     </div>
+                    {{-- <div class="row">
+                        <div class="col" style="margin-top: 20px;">
+                            <a class="btn btn-primary" href="{{ route('generatePdf') }}" type="button">Download PDF</a>
+
+
+                        </div>
+                    </div> --}}
                     <div class="row" style="margin-top: 30px;">
                         <div class="col" style="margin-top: 40px;"><a href="{{ route('toplayer') }}" style="font-family: poppins;font-size: 20px;color: #5F2B84;">Back</a></div>
                     </div>

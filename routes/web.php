@@ -12,6 +12,10 @@ use App\Http\Controllers\DeepAssessmentController;
 use App\Http\Controllers\OperationalLayerController;
 
 
+// adding new test 
+use Dompdf\Dompdf;
+use Dompdf\Options;
+
 
 /*
 
@@ -207,6 +211,10 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
     Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
 
+
+    // Route::get('/generate-pdf', [TopLayerController::class, 'topManagementReport'])->name('generatePdf');
+
+
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
 
@@ -363,4 +371,7 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
 });
+
+
+
 
