@@ -1,6 +1,8 @@
 @extends('layouts.govofficialnavbar')
 
 @section('content')
+<script src="{{ asset('jsfile/alladdnewjs.js') }}" defer></script>
+
 
 <div class="container" id="div4" style="background: linear-gradient(to top right, #660066 56%, #FF6699 100%); text-align:center; margin-bottom:5%; border-radius:1%;padding-bottom:3%">
     <div class="row" style="text-align:center">
@@ -14,8 +16,17 @@
                     <div class="row">
                         <h5 id="h5" style="margin-top:5%; color: #5F2B84; text-align:left;"> Username<span style="color: red;">*</span></h5>
                     </div>
-                    <div class="row">
+                    {{-- <div class="row">
                         <input class="form-control-lg" id="username" name="username" type="text" placeholder="Enter Username" style="width:80%;margin-left:10%;" value="{{ old('username')}}">
+                        @if($errors->has('username'))
+                        <p class="text-danger" style="font-weight: bold">{{ $errors->first('username') }}</p>
+                        @endif
+                    </div> --}}
+                    <div class="row">
+                        <input class="form-control-lg" id="username" name="username" type="text" placeholder="Enter Your National ID NO (Not Enter V)" style="width:80%;margin-left:10%;" value="{{ old('username')}}" pattern="\d{9}|\d{12}" title="Please enter either 9 or 12 digits only">
+
+
+
                         @if($errors->has('username'))
                         <p class="text-danger" style="font-weight: bold">{{ $errors->first('username') }}</p>
                         @endif
@@ -26,7 +37,8 @@
                         <h5 id="h5" style="margin-top:5%; color: #5F2B84; text-align:left;"> Email<span style="color: red;">*</span></h5>
                     </div>
                     <div class="row">
-                        <input class="form-control-lg" id="email" name="email" type="email" placeholder="Enter Email" style="width:80%;margin-left:10%" value="{{ old('email')}}">
+                        <input class="form-control-lg" id="email" name="email" type="email" placeholder="Enter Email" style="width:80%;margin-left:10%" value="{{ old('email')}}" oninput="validateEmail(this)">
+                        <p id="email-error" style="color: red; display: none;">Please enter a valid email address </p>
                         @if($errors->has('email'))
                         <p class="text-danger" style="font-weight: bold">{{ $errors->first('email') }}</p>
                         @endif
@@ -100,8 +112,9 @@
 
     <script>
         toastr.success("{{ Session::get('message') }}");
-    </script>
 
+    </script>
+     
     @endif
 
     @endsection
