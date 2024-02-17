@@ -1,6 +1,8 @@
 @extends('layouts.govofficialusernavbar')
 
 @section('content')
+<script src="{{ asset('jsfile/alladdnewjs.js') }}" defer></script>
+
     <form method="POST" action="{{ route('govofficials.update', $govofficial->id) }}">
         {{ csrf_field() }}
 
@@ -93,20 +95,7 @@
                             <p id="contact-number-error" style="color: red; display: none;">Please enter a valid 10-digit
                                 contact number</p>
 
-                            <script>
-                                function validateContactNumber(input) {
-                                    var contactNumber = input.value.trim();
-                                    var contactNumberError = document.getElementById("contact-number-error");
-
-                                    if (!/^\d{10}$/.test(contactNumber)) {
-                                        contactNumberError.style.display = "block";
-                                        input.setCustomValidity("Invalid contact number");
-                                    } else {
-                                        contactNumberError.style.display = "none";
-                                        input.setCustomValidity(""); // Reset custom validity
-                                    }
-                                }
-                            </script>
+                           
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -117,23 +106,7 @@
                             placeholder="Enter the email address" style="width: 80%; margin-left: 10%"
                             value="{{ Auth::user()->govofficial->email }}" oninput="validateEmail(this)">
                         <p id="email-error" style="color: red; display: none;">Please enter a valid email address </p>
-                        {{-- <script>
-                            function validateEmail(input) {
-                                var email = input.value;
-                                var emailError = document.getElementById("email-error");
-
-                                // Regular expression to validate email address
-                                var emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-
-                                if (!emailRegex.test(email)) {
-                                    emailError.style.display = "block";
-                                    input.setCustomValidity("Invalid email address");
-                                } else {
-                                    emailError.style.display = "none";
-                                    input.setCustomValidity(""); // Reset custom validity
-                                }
-                            }
-                        </script> --}}
+                       
                     </div>
                 </div>
                 <div class="row">
@@ -185,21 +158,7 @@
                                 max="<?php echo date('Y') - 16 . '-' . date('m-d'); ?>" oninput="validateDateOfBirth(this)">
                             <p id="date-of-birth-error" style="color: red; display: none;">Please enter a valid date of
                                 birth</p>
-                            <script>
-                                function validateDateOfBirth(input) {
-                                    var selectedDate = new Date(input.value);
-                                    var currentDate = new Date();
-
-                                    var dateOfBirthError = document.getElementById("date-of-birth-error");
-
-                                    if (selectedDate > currentDate) {
-                                        dateOfBirthError.textContent = "Please select a date in the past";
-                                        dateOfBirthError.style.display = "block";
-                                    } else {
-                                        dateOfBirthError.style.display = "none";
-                                    }
-                                }
-                            </script>
+                          
                         </div>
                     </div>
                 </div>

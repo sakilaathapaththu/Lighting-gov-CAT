@@ -38,17 +38,17 @@ function validateEmail(input) {
 }
 
 
-// Contact number entering validation 
-function validateContactNumber(input) {
-    var contactNumber = input.value.trim();
-    var contactNumberError = document.getElementById("contact-number-error");
+// // Contact number entering validation 
+// function validateContactNumber(input) {
+//     var contactNumber = input.value.trim();
+//     var contactNumberError = document.getElementById("contact-number-error");
 
-    if (!/^\d{10}$/.test(contactNumber)) {
-        contactNumberError.style.display = "block";
-    } else {
-        contactNumberError.style.display = "none";
-    }
-}
+//     if (!/^\d{10}$/.test(contactNumber)) {
+//         contactNumberError.style.display = "block";
+//     } else {
+//         contactNumberError.style.display = "none";
+//     }
+// }
 
 // Birth day validation
 function validateDateOfBirth(input) {
@@ -62,5 +62,20 @@ function validateDateOfBirth(input) {
         dateOfBirthError.style.display = "block";
     } else {
         dateOfBirthError.style.display = "none";
+    }
+}
+
+
+ // Contact number entering validation 
+function validateContactNumber(input) {
+    var contactNumber = input.value.trim();
+    var contactNumberError = document.getElementById("contact-number-error");
+
+    if (!/^\d{10}$/.test(contactNumber)) {
+        contactNumberError.style.display = "block";
+        input.setCustomValidity("Invalid contact number");
+    } else {
+        contactNumberError.style.display = "none";
+        input.setCustomValidity(""); // Reset custom validity
     }
 }
