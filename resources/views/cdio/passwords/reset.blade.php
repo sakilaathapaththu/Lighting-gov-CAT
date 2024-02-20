@@ -3,9 +3,9 @@
 @section('content')
 <form method="POST" action="{{ route('change.password') }}">
         @csrf
-<div class="container" data-aos="fade-down" data-aos-duration="1000" id="div3" style="font-family:poppins;background: linear-gradient(to top right, #660066 56%, #FF6699 100%);border-radius:10px;padding-bottom:3%;margin-bottom:3%">
+<div class="container" data-aos="fade-down" data-aos-duration="1000" id="div3" style="font-family:poppins;background: linear-gradient(to top right, #660066 56%, #FF6699 100%);border-radius:10px;">
     <div class="row" style="text-align:center;">
-        <h1 id="h1" style="color:#fff;margin-top:2%">Reset Your Password</h1>
+        <h1 id="h1" style="color:#fff;margin-top:2%">Reset Your Password </h1>
     </div>
     <div class="container" style="background:#fff;border-radius:10px;">
         <div class="row">

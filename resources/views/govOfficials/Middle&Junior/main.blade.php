@@ -39,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6" data-aos="fade-left" data-aos-duration="950" style="width: 524px;height: 545px;margin-left: 150px;border-radius: 10px;border-style: solid;border-color: #5F2B84;box-shadow: 0px 0px 6px 1px #5F2B84;">
+        <div class="col-md-6" data-aos="fade-left" data-aos-duration="950" style="width: 524px;height: 545px;margin-left: 10px;border-radius: 10px;border-style: solid;border-color: #5F2B84;box-shadow: 0px 0px 6px 1px #5F2B84;">
             <div>
                 <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Digital Government Assessment</p><img width="336" height="250" src="{{ asset('img/10782817_19197324 1.png') }}" style="width: 291px;height: 258px;font-family: poppins;">
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
@@ -69,7 +69,7 @@
     </div>
 </div>
 <div class="container">
-<div class="row" style="margin-top: 100px;margin-bottom:50px">
+<div class="row" style="margin-top: 10px;margin-bottom:50px">
     <div class="col-md-6" data-aos="fade-up" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;margin-left: 32%;border-style: solid;border-color: #5F2B84;text-align: center;">
         <div>
             <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">Management Assessment</p><img width="336" height="250" src="{{ asset('img/12146032_Wavy_Gen-03_Single-07 1.png') }}" style="width: 367px;height: 242px;">

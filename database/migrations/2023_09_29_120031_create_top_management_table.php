@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('top_management', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-<<<<<<< HEAD
+
             $table->string('organizational_leadership');
             $table->string('communication');
             $table->string('workplace_management');
@@ -25,8 +25,7 @@ return new class extends Migration
             $table->string('personal_development');
             $table->string('overall_top_management');
             $table->foreignId('govofficial_id')->constrained('govofficials')->onDelete('cascade');
-=======
->>>>>>> 1532b9432290ca7559b0c9fcb0fff057ca736fa5
+
         });
     }
 

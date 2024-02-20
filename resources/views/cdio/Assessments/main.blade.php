@@ -31,10 +31,12 @@
             <div class="row">
                 <img src="{{ asset('img/10780254_19197640 1.png') }}">
             </div>
+            
             <div class="card" style="text-align: justify;width: 50%;border-width:0px">
                 <div class="card-body" style="background: rgba(244,140,67,0.27);border-radius: 10px;width: 200%;height: 50%;text-align: justify;">
                     <div class="row">
                         <h7 id="h4" class="card-text" style="text-align: justify;font-family: poppins;">Required knowledge and skills in ICT to enable more efficient, cost-effective, and participatory government, facilitate more convenient government services, allow greater public access to information, and make government more accountable to citizens.<br><br></h7>
+                    
                     </div>
                     <div class="row">
                      @if($ictInWorkplaceExists==true && $informationManagementExists==true && $managingTechnologicalInterventionExists==true && $digitalCitizenshipExists==true)   
@@ -62,9 +64,10 @@
                 <img src="{{ asset('img/10782817_19197324 1.png') }}" style="width:75%;height:75%;margin-left:10%">
             </div>   
             <div class="card" style="text-align: justify;width: 50%;border-width:0px">
-                <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 200%;height:70%;text-align: justify;">
+                <div class="card-body" style="background: rgba(244,140,67,0.25);border-radius: 10px;width: 200%;height:245px;text-align: justify;">
                     <div class="row">
                         <h7 id="h4" style="text-align: justify;font-family: poppins;">Required knowledge and capabilities to drive an ICT-enabled transformation of the public sector. And making it possible to carry out the public sector’s tasks more efficiently and effectively.<br><br></h7>
+                    
                     </div>
                     <div class="row">
                     @if($digitalInitiative && $driveTheAdoption && $managingQuality && $orientation && $collaboration && $changeManagement && $projectAndProgrammeManagement)  
