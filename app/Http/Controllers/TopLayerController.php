@@ -27,15 +27,21 @@ use App\Models\TopWorkplaceManagement;
 use App\Models\TopInformationManagement;
 use App\Models\TopStakeholderManagement;
 use App\Models\TopOrganizationalLeadership;
+
+use \PDF;
+
 // use App\Models\TopInformationManagement;
 
 
 
 //
-
+/*
 use Dompdf\Dompdf;
-use Dompdf\Options;
+use Dompdf\Options;*/
 use Illuminate\Support\Facades\View;
+
+
+
 
 
 class TopLayerController extends Controller
@@ -905,6 +911,7 @@ class TopLayerController extends Controller
 
     public function topManagementReport(){
 
+        /*
         $topManagement = Auth::user()->govofficial->topManagement;
 
         $topOrganizationalLeadership=$topManagement->organizational_leadership;
@@ -961,8 +968,15 @@ class TopLayerController extends Controller
         $topStakeholderManagement2=$govOfficial->topStakeholder;
         $topHumanResource2=$govOfficial->topHumanResource;
         $topPersonalDevelopment2=$govOfficial->topPersonalDevelopment;
+*/
+        //return view('govOfficials.Top&2ndTier.Management.report',compact('govOfficial','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
+        //$pdf = PDF::loadView('govOfficials.Top&2ndTier.Management.report-test',compact('govOfficial','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
 
-        return view('govOfficials.Top&2ndTier.Management.report',compact('govOfficial','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
+        //$pdf = PDF::loadView('govOfficials.Top&2ndTier.Management.report-test',compact('govOfficial','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
+        //$pdf = PDF::loadView('govOfficials.Top&2ndTier.Management.report-test');
+        //$pdf = PDF::loadView('pdf.report');
+        $pdf = PDF::loadView('pdf.report');
+        return $pdf->stream('report.pdf', array('Attachment' => 0));
     }
 
 //     public function topManagementReport()
