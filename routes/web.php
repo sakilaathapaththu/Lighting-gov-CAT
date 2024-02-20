@@ -172,6 +172,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/ict/result', [TopLayerController::class, 'topIctResult'])->name('topIctResult');
     Route::get('/top/ict/report', [TopLayerController::class, 'topIctReport'])->name('topIctReport');
 
+//
+// Route::get('/download-pdf', [TopLayerController::class, 'downloadPdf'])->name('download.pdf');
+
+
+
+
+
     Route::get('/top/digitalgovernment/page01', [TopLayerController::class, 'topDigitalGovernmentPage01'])->name('topDigitalGovernmentPage01');
     Route::get('/top/digitalgovernment/page02', [TopLayerController::class, 'topDigitalGovernmentPage02'])->name('topDigitalGovernmentPage02');
     Route::get('/top/digitalgovernment/page03', [TopLayerController::class, 'topDigitalGovernmentPage03'])->name('topDigitalGovernmentPage03');

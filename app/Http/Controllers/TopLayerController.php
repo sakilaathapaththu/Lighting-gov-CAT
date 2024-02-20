@@ -34,7 +34,7 @@ use App\Models\TopOrganizationalLeadership;
 //
 
 use Dompdf\Dompdf;
-
+use Dompdf\Options;
 use Illuminate\Support\Facades\View;
 
 
@@ -1290,6 +1290,44 @@ class TopLayerController extends Controller
         return view('govOfficials.Top&2ndTier.overallReport',compact('govOfficial','data','labels','topDigitalCitizenship2','topInformationManagement2','topIctInWorkplace2','avgTopDigitalCitizenship','avgTopInformationManagement','avgTopIctInWorkplace','result','topLeadership2','topProjectManagement2','result2','avgtopChangeManagement','avgtopCollaboration','avgtopOrientatiion','avgtopQualityManagement','avgtopLeadership','topChangeManagement2','topCollaboration2','topOrientation2','topQualityManagement2','avgtopCapacityBuilding','avgtopDecisionMaking','topCapacityBuilding2','topDecisionMaking2','result3','topCommunication2','topWorkplaceManagement2','topStakeholderManagement2','topPersonalDevelopment2','avgtopCommunication','avgtopWorkplaceManagement','avgtopStakeholderManagement','avgtopPersonalDevelopment'));
     }
 
+
+
+
+
+
+    // adding generate the pdf 
+    public function downloadPdf()
+{
+    // Generate $result data (same as in topIctResult())
+    $result = [
+        ['Category', 'Value'],
+        ['ICT in Workplace', 50], // Example values
+        ['Information Management', 75],
+        ['Digital Citizenship', 80],
+    ];
+
+    $data = [
+        'result' => $result,
+    ];
+
+    // Render the chart view to HTML
+    $chartHtml = view('govOfficials.Top&2ndTier.ICT.results', $data)->render();
+
+    // Initialize Dompdf
+    $dompdf = new Dompdf();
+    $options = new Options();
+    $options->set('isHtml5ParserEnabled', true);
+    $dompdf->setOptions($options);
+
+    // Load HTML content (chart) into Dompdf
+    $dompdf->loadHtml($chartHtml);
+
+    // Render PDF (optional: you can also set paper size, orientation, etc.)
+    $dompdf->render();
+
+    // Output PDF as a download
+    return $dompdf->stream("chart_report.pdf");
+}
 
 }
 // } 
