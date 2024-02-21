@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section data-aos="fade-down" style="height: 3750px;text-align: center;">
+<section data-aos="fade-down" style="margin-bottom: 20px;text-align: center;">
     <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="50" style="margin-top: 150px;width: 1268px;height: 494px;border: 6px solid #5F2B84;border-radius: 10px;">
         <div class="container">
             <div class="row">
