@@ -56,12 +56,17 @@
                 <div class="col" style="text-align: center;"><span style="font-size: 24px;color: #000000;font-family: Poppins, sans-serif;font-weight: bold;">{{ $govOfficial->govorganizationname->gov_org_name }}</span></div>
             </div>
             <!-- Additional rows and content -->
+            <div class="row" style="text-align: center;margin-top: 3%">
 
+                <div class="col" ><img src="{{ asset('ICTA.png') }}"
+                        style="width: 117px;height: 55px"><img src="{{ asset('Light2.png') }}" style="width:126px;">
+                </div>
+            </div>
             <div class="row" style="text-align: center;margin-top:55%">
                 <div class="col" style="margin-left:300px"><span
                         style="font-family: Poppins, sans-serif;"></span></div>
-                <div class="col" style="margin-right:-50px"><img src="{{ asset('ICTA.png') }}"
-                        style="width: 117px;height: 55px"><img src="{{ asset('Light2.png') }}" style="width:126px;">
+                <div class="col" style="margin-right:-50px;width: 117px;height: 55px">
+                    
                 </div>
             </div>
         </div>
@@ -146,13 +151,7 @@
                 </table>
             </div>
 
-            <div class="row" style="text-align: center;margin-top:45%">
-                <div class="col" style="margin-left:320px"><span style="font-family: Poppins, sans-serif;">2</span>
-                </div>
-                <div class="col" style="margin-right:-50px"><img src="{{ asset('ICTA.png') }}"
-                        style="width: 117px;height: 55px"><img src="{{ asset('Light2.png') }}" style="width:126px;">
-                </div>
-            </div>
+           
 
 
 
@@ -268,24 +267,18 @@
                 </table>
             </div>
 
-            <div class="row" style="text-align: center;margin-top:35%">
-                <div class="col" style="margin-left:300px"><span
-                        style="font-family: Poppins, sans-serif;">3</span></div>
-                <div class="col" style="margin-right:-50px"><img src="{{ asset('ICTA.png') }}"
-                        style="width: 117px;height: 55px"><img src="{{ asset('Light2.png') }}" style="width:126px;">
-                </div>
-            </div>
-
+          
 
 
         </div>
     </div>
     <div style="text-align: center;margin-top: 50px;">
-        <button id="generate-pdf" onclick="generatePDF()">Generate PDF</button>
+        
+        <button  onclick="window.print()">Print</button> <!-- Print Button -->
     </div>
 
 
-    <script>
+    {{-- <script>
         function generatePDF() {
             const pdf = new jsPDF();
 
@@ -303,7 +296,7 @@
             // Save the PDF
             pdf.save('competency_proficiency_report.pdf');
         }
-    </script>
+    </script> --}}
 </body>
 
 </html>

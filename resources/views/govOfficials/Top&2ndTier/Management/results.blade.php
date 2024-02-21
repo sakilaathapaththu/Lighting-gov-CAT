@@ -65,7 +65,7 @@
             </script>
         </div>
     </div>
-    <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
+    {{-- <div class="table-responsive" style="margin-top: 100px;margin-left: 50px;">
          <table class="table">
             <thead style="background: var(--bs-table-border-color);">
                 <tr style="background: var(--bs-table-border-color);height: 60px;">
@@ -223,10 +223,10 @@
                         Personal development<br><br>
                         @endif
                     </td>
-                </tr> --}}
+                </tr> 
             </tbody>
         </table> 
-    </div>
+    </div> --}}
 </section>
 
 @endsection
