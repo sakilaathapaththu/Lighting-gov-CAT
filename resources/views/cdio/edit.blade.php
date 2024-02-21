@@ -203,7 +203,7 @@
                             style="background: rgb(255,255,255);color: rgb(238,110,17);border-color: rgb(238,110,17);">Cancel</button>
                     </div>
                     <div class="col-6" style="text-align:left">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update" type="button"
+                        <button class="btn btn-primary" type="submit" onclick="handleFormSubmission()"
                             style="background: linear-gradient(to bottom right, #F44567 0%, #F97B5F 49%);text-align: center;border-color: rgb(254,80,57);">Update</button>
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" style="font-family:poppins" id="update" tabindex="-1"
+        {{-- <div class="modal fade" style="font-family:poppins" id="update" tabindex="-1"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -250,7 +250,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </form>
     <!-- <section style="height: 1250px;">
         <div class="container-fluid d-table float-none" data-aos="fade-down" data-aos-duration="1000" style="margin-top: 200px;background: #5f2b84;width: 1177px;height: 1200px;border-radius: 10px;">
@@ -486,4 +486,38 @@
             }
         });
     </script> -->
+    <script>
+        function showSuccessModal() {
+        $('#successModal').modal('show'); // Show the success modal
+    }
+
+    // Function to handle form submission
+    function handleFormSubmission() {
+        $('#form').submit(function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Submit the form via AJAX
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                success: function(response) {
+                    // If the form submission is successful, show the success modal
+                    showSuccessModal();
+                },
+                error: function(xhr, status, error) {
+                    // If there is an error with the form submission, handle it here
+                    console.log(error);
+                    // You can display an error message or handle the error in any other way
+                }
+            });
+        });
+    }
+
+    // Call the function to handle form submission
+    $(document).ready(function() {
+        handleFormSubmission();
+    });
+    </script>
 @endsection
