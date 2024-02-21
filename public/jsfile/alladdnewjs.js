@@ -50,7 +50,7 @@ function validateEmail(input) {
 //     }
 // }
 
-// Birth day validation
+// Birth day validation register and edit page 
 function validateDateOfBirth(input) {
     var selectedDate = new Date(input.value);
     var currentDate = new Date();
@@ -66,16 +66,19 @@ function validateDateOfBirth(input) {
 }
 
 
- // Contact number entering validation 
-function validateContactNumber(input) {
+ // Contact number entering validation registeration page and edit page 
+ function validateContactNumber(input) {
     var contactNumber = input.value.trim();
     var contactNumberError = document.getElementById("contact-number-error");
 
-    if (!/^\d{10}$/.test(contactNumber)) {
+    if (!/^[0]\d{9}$/.test(contactNumber)) {
         contactNumberError.style.display = "block";
-        input.setCustomValidity("Invalid contact number");
+        input.setCustomValidity("Invalid contact number. The first digit must be 0.");
     } else {
         contactNumberError.style.display = "none";
         input.setCustomValidity(""); // Reset custom validity
     }
 }
+
+
+// cdio edit page validations 

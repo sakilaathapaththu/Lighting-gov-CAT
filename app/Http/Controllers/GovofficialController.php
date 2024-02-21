@@ -98,7 +98,7 @@ class GovofficialController extends Controller
         $govnames = Govorganizationname::get();
         $layer=Auth::user()->govofficial->employment_layer;
         if($layer=='cdio'){
-            return view('cdio.edit', compact('govofficial'));
+            return view('cdio.edit', compact('govofficial','govnames'));
         }
         else{
             return view('govOfficials.edit', compact('govofficial','govnames'));
