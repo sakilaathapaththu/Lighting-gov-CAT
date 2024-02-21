@@ -106,7 +106,7 @@
             </div>
             <div class="row footer-copyright" style="background: #660066;">
                 <div class="col" style="background: #660066;">
-                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #fffff;">Copyright @ 2023 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
+                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #fffff;">Copyright @ 2024 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
                 </div>
             </div>
         </div>
