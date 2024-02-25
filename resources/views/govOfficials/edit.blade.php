@@ -89,7 +89,7 @@
                                 placeholder="Enter the Contact Number" style="width:80%;margin-left:10%"
                                 value="{{ Auth::user()->govofficial->contact_number }}"> --}}
                             <input class="form-control-lg" id="contact_number" name="contact_number" type="text"
-                                placeholder="Enter the Contact Number" style="width:80%;margin-left:10%"
+                                placeholder="Enter the Contact Number(0XXXXXXXXX)" style="width:80%;margin-left:10%"
                                 value="{{ Auth::user()->govofficial->contact_number }}" pattern="[0-9]{10}"
                                 oninput="validateContactNumber(this)">
                             <p id="contact-number-error" style="color: red; display: none;">Please enter a valid 10-digit
