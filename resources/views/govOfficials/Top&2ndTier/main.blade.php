@@ -16,9 +16,11 @@
     </div>
 </div>
 <p style="color: #1F2471;font-size: 36px;font-weight: bold;font-family: poppins;text-align: center;margin-top: 30px;"><br>Assessments</p>
+
+
 <div class="container">
     <div class="row" style="margin-top: 60px;text-align: center;border-color: var(--bs-body-color);">
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;margin-left: 60px;border-style: solid;border-color: #5F2B84;">
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="950" style="border-radius: 10px;box-shadow: 0px 0px 6px 1px #5F2B84;width: 524px;height: 545px;border-style: solid;border-color: #5F2B84;">
             <div>
                 <p style="color: #5F2B84;font-size: 24px;font-weight: bold;text-align: center;box-shadow: 0px 0px var(--bs-emphasis-color);margin-top: 20px;font-family: poppins;">ICT Competency Assessment</p><img width="336" height="250" src="{{ asset('img/10782817_19197324 1.png') }}" style="width: 367px;height: 242px;">
                 <div class="card" style="text-align: center;width: 500px;margin-right: 5px;">
@@ -81,7 +83,7 @@
                         @elseif($topManagement)
 
 
-                        @if($topManagement)
+                       
 
                         <a class="btn btn-primary" href="{{ route('topManagementResult') }}" type="button" style="width: 198px;height: 47px;font-family: Poppins, sans-serif;font-size: 18px;color: #ef4323;background: rgb(255,255,255);border-width: 2px;border-color: #ef4323;margin-right: 10px; border-radius: 10px;margin-top: -20px">View Results</a>
                         @elseif($topHumanResource)
@@ -103,7 +105,7 @@
                         @endif
                     </div>
 
-                    <a class="btn btn-primary" href="{{route('topManagementPage01')}}" type="button" style="font-family:poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a>
+                    {{-- <a class="btn btn-primary" href="{{route('topManagementPage01')}}" type="button" style="font-family:poppins;width: 178px;height: 55px;background: url(&quot;{{ asset('img/Screenshot (561) 2.png') }}&quot;), var(--bs-btn-disabled-color);font-weight: bold;font-size: 20px;border-style: none;">Get Started</a> --}}
                 </div>
 
             </div>

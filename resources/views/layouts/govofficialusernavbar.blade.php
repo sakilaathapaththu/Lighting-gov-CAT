@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top " data-aos="slide-down" data-aos-duration="1000" style="background: #C1C2DA;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top "   style="background: #C1C2DA;">
         <div class="container-fluid">
             <!-- <a class="navbar-brand d-flex align-items-center" href="#"></a> -->
             <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -86,7 +86,7 @@
             </div>
         @yield('content')
     </div>
-    <footer data-aos="slide-up" data-aos-duration="1000" id="myFooter" style="background: #C1C2DA;">
+    <footer  id="myFooter" style="background: #C1C2DA;margin-bottom: -80px">
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-lg-4 col-md-4 col-sm-4">
@@ -112,7 +112,7 @@
             </div>
             <div class="row footer-copyright" style="background: #8D8E9D;">
                 <div class="col" style="background: #8D8E9D;">
-                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #000;">Copyright @ 2023 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
+                    <p style="text-align: left;font-family: Poppins, sans-serif;font-size: 14px;color: #000;">Copyright @ 2024 <span style="color: rgb(255, 0, 0);">ICT Agency of Sri Lanka</span>. All rights reserved&nbsp;</p>
                 </div>
             </div>
         </div>

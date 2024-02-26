@@ -2,7 +2,7 @@
 
 @section('content')
 
-<body>
+
     
         {{--  @if (session('status'))
         <div class="alert alert-success" role="alert">
@@ -12,7 +12,7 @@
         
         <form method="POST" action="{{ route('login') }}">
             @csrf
-        <div class="container" id="div1" data-aos="fade-down" data-aos-duration="1000"  style="width: 80%;margin-bottom:5%">
+        <div class="container" id="div1"  style="width: 80%;margin-bottom:5%">
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-sm-6" style="background: linear-gradient(to top right, #660066 56%, #FF6699 100%);">
                     <!-- <div class="flex-column justify-content-center align-items-center align-content-center align-self-center order-first" style="border-radius: 10px;background: #ffffff;color: rgb(0,0,0);margin-top: 50px;width: 402px;height: 369px;margin-left: 34px;text-align: center;"> -->
@@ -66,5 +66,5 @@
         </div>
         </form>
    
-</body>
+
 @endsection

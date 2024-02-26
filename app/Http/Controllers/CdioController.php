@@ -83,15 +83,15 @@ class CdioController extends Controller
     }
 
     public function cdioIctPage01(){
-        return view('cdio.assessments.ICT.page01');
+        return view('cdio.Assessments.ICT.page01');
     }
 
     public function cdioIctPage02(){
-        return view('cdio.assessments.ICT.page02');
+        return view('cdio.Assessments.ICT.page02');
     }
 
     public function cdioIctPage03(){
-        return view('cdio.assessments.ICT.page03');
+        return view('cdio.Assessments.ICT.page03');
     }
 
     public function cdioIctPage04(){
@@ -102,7 +102,7 @@ class CdioController extends Controller
         $totCdioIctInWorkplace=$cdioIctInWorkplace->ict1+$cdioIctInWorkplace->ict2+$cdioIctInWorkplace->ict3+$cdioIctInWorkplace->ict4+$cdioIctInWorkplace->ict5+$cdioIctInWorkplace->ict6;
         $totCdioInformationManagement=$cdioInformationManagement->ict7;
         $totCdioManagingTechnologicalIntervention=$cdioManagingTechnologicalIntervention->ict8+$cdioManagingTechnologicalIntervention->ict9+$cdioManagingTechnologicalIntervention->ict10+$cdioManagingTechnologicalIntervention->ict11+$cdioManagingTechnologicalIntervention->ict12;
-        return view('cdio.assessments.ICT.page04',compact('totCdioIctInWorkplace','totCdioInformationManagement','totCdioManagingTechnologicalIntervention'));
+        return view('cdio.Assessments.ICT.page04',compact('totCdioIctInWorkplace','totCdioInformationManagement','totCdioManagingTechnologicalIntervention'));
     }
 
     public function storeCdioIctInWorkplace(Request $request){
@@ -249,7 +249,7 @@ class CdioController extends Controller
             ['Digital Citizenship', (int) $avgCdioDigitalCitizenship]
         ];
 
-        return view('cdio.assessments.ICT.results',compact('result','cdioDigitalCitizenship2','cdioManagingTechnologicalIntervention2','cdioInformationManagement2','cdioIctInWorkplace2','avgCdioIctInWorkplace','avgCdioInformationManagement','avgCdioManagingTechnologicalIntervention','avgCdioDigitalCitizenship'));
+        return view('cdio.Assessments.ICT.results',compact('result','cdioDigitalCitizenship2','cdioManagingTechnologicalIntervention2','cdioInformationManagement2','cdioIctInWorkplace2','avgCdioIctInWorkplace','avgCdioInformationManagement','avgCdioManagingTechnologicalIntervention','avgCdioDigitalCitizenship'));
     }
 
     public function cdioIctReport(){
@@ -286,31 +286,31 @@ class CdioController extends Controller
             ['Digital Citizenship', (int) $avgCdioDigitalCitizenship]
         ];
  
-        return view('cdio.assessments.ICT.report',compact('govOfficial','result','cdioDigitalCitizenship2','cdioManagingTechnologicalIntervention2','cdioInformationManagement2','cdioIctInWorkplace2','avgCdioIctInWorkplace','avgCdioInformationManagement','avgCdioManagingTechnologicalIntervention','avgCdioDigitalCitizenship'));
+        return view('cdio.Assessments.ICT.report',compact('govOfficial','result','cdioDigitalCitizenship2','cdioManagingTechnologicalIntervention2','cdioInformationManagement2','cdioIctInWorkplace2','avgCdioIctInWorkplace','avgCdioInformationManagement','avgCdioManagingTechnologicalIntervention','avgCdioDigitalCitizenship'));
     }
 
     public function cdioDigitalGovernmentPage01(){
-        return view('cdio.assessments.DigitalGovernment.page01');
+        return view('cdio.Assessments.DigitalGovernment.page01');
     }
 
     public function cdioDigitalGovernmentPage02(){
-        return view('cdio.assessments.DigitalGovernment.page02');
+        return view('cdio.Assessments.DigitalGovernment.page02');
     }
 
     public function cdioDigitalGovernmentPage03(){
-        return view('cdio.assessments.DigitalGovernment.page03');
+        return view('cdio.Assessments.DigitalGovernment.page03');
     }
 
     public function cdioDigitalGovernmentPage04(){
-        return view('cdio.assessments.DigitalGovernment.page04');
+        return view('cdio.Assessments.DigitalGovernment.page04');
     }
 
     public function cdioDigitalGovernmentPage05(){
-        return view('cdio.assessments.DigitalGovernment.page05');
+        return view('cdio.Assessments.DigitalGovernment.page05');
     }
 
     public function cdioDigitalGovernmentPage06(){
-        return view('cdio.assessments.DigitalGovernment.page06');
+        return view('cdio.Assessments.DigitalGovernment.page06');
     }
 
     public function cdioDigitalGovernmentPage07(){
@@ -328,7 +328,7 @@ class CdioController extends Controller
         $totCdioManagingQuality=$cdioManagingQuality->dg15+$cdioManagingQuality->dg16+$cdioManagingQuality->dg17+$cdioManagingQuality->dg18+$cdioManagingQuality->dg19;
         $totCdioDriveTheAdoption=$cdioDriveTheAdoption->dg20+$cdioDriveTheAdoption->dg21+$cdioDriveTheAdoption->dg22+$cdioDriveTheAdoption->dg23+$cdioDriveTheAdoption->dg24+$cdioDriveTheAdoption->dg25;
 
-        return view('cdio.assessments.DigitalGovernment.page07',compact('totCdioDriveTheAdoption','totCdioManagingQuality','totCdioOrientation','totCdioCollaboration','totCdioProjectAndProgrammeManagement','totCdioChangeManagement'));
+        return view('cdio.Assessments.DigitalGovernment.page07',compact('totCdioDriveTheAdoption','totCdioManagingQuality','totCdioOrientation','totCdioCollaboration','totCdioProjectAndProgrammeManagement','totCdioChangeManagement'));
     }
 
     public function storeCdioProjectAndProgrammeManagement(Request $request){
@@ -560,7 +560,7 @@ class CdioController extends Controller
         $cdioDriveTheAdoption2=$govofficial->cdioDriveTheAdoption;
         $cdioDigitalInitiative2=$govofficial->cdioDigitalInitiative;
 
-        return view('cdio.assessments.DigitalGovernment.results',compact('avgCdioDigitalInitiative','avgCdioDriveTheAdoption','avgCdioManagingQuality','avgCdioOrientation','avgCdioCollaboration','avgCdioChangeManagement','avgCdioProjectAndProgrammeManagement','result','cdioDigitalInitiative2','cdioDriveTheAdoption2','cdioManagingQuality2','cdioOrientation2','cdioCollaboration2','cdioChangeManagement2','cdioProjectAndProgrammeManagement2'));
+        return view('cdio.Assessments.DigitalGovernment.results',compact('avgCdioDigitalInitiative','avgCdioDriveTheAdoption','avgCdioManagingQuality','avgCdioOrientation','avgCdioCollaboration','avgCdioChangeManagement','avgCdioProjectAndProgrammeManagement','result','cdioDigitalInitiative2','cdioDriveTheAdoption2','cdioManagingQuality2','cdioOrientation2','cdioCollaboration2','cdioChangeManagement2','cdioProjectAndProgrammeManagement2'));
     }
 
     public function cdioDigitalGovernmentReport(){
@@ -615,39 +615,39 @@ class CdioController extends Controller
         $cdioDriveTheAdoption2=$govofficial->cdioDriveTheAdoption;
         $cdioDigitalInitiative2=$govofficial->cdioDigitalInitiative;
 
-        return view('cdio.assessments.DigitalGovernment.report',compact('govofficial','avgCdioDigitalInitiative','avgCdioDriveTheAdoption','avgCdioManagingQuality','avgCdioOrientation','avgCdioCollaboration','avgCdioChangeManagement','avgCdioProjectAndProgrammeManagement','result','cdioDigitalInitiative2','cdioDriveTheAdoption2','cdioManagingQuality2','cdioOrientation2','cdioCollaboration2','cdioChangeManagement2','cdioProjectAndProgrammeManagement2'));
+        return view('cdio.Assessments.DigitalGovernment.report',compact('govofficial','avgCdioDigitalInitiative','avgCdioDriveTheAdoption','avgCdioManagingQuality','avgCdioOrientation','avgCdioCollaboration','avgCdioChangeManagement','avgCdioProjectAndProgrammeManagement','result','cdioDigitalInitiative2','cdioDriveTheAdoption2','cdioManagingQuality2','cdioOrientation2','cdioCollaboration2','cdioChangeManagement2','cdioProjectAndProgrammeManagement2'));
     }
 
     public function cdioManagementPage01(){
-        return view('cdio.assessments.Management.page01');
+        return view('cdio.Assessments.Management.page01');
     }
 
     public function cdioManagementPage02(){
-        return view('cdio.assessments.Management.page02');
+        return view('cdio.Assessments.Management.page02');
     }
 
     public function cdioManagementPage03(){
-        return view('cdio.assessments.Management.page03');
+        return view('cdio.Assessments.Management.page03');
     }
 
     public function cdioManagementPage04(){
-        return view('cdio.assessments.Management.page04');
+        return view('cdio.Assessments.Management.page04');
     }
 
     public function cdioManagementPage05(){
-        return view('cdio.assessments.Management.page05');
+        return view('cdio.Assessments.Management.page05');
     }
 
     public function cdioManagementPage06(){
-        return view('cdio.assessments.Management.page06');
+        return view('cdio.Assessments.Management.page06');
     }
 
     public function cdioManagementPage07(){
-        return view('cdio.assessments.Management.page07');
+        return view('cdio.Assessments.Management.page07');
     }
 
     public function cdioManagementPage08(){
-        return view('cdio.assessments.Management.page08');
+        return view('cdio.Assessments.Management.page08');
     }
 
     public function cdioManagementPage09(){
@@ -669,7 +669,7 @@ class CdioController extends Controller
         $totCdioTeamwork=$cdioTeamwork->mgt35+$cdioTeamwork->mgt36;
         $totCdioSelfDevelopment=$cdioSelfDevelopment->mgt37+$cdioSelfDevelopment->mgt38;
 
-        return view('cdio.assessments.Management.page09',compact('totCdioSelfDevelopment','totCdioTeamwork','totCdioHumanResource','totCdioStakeholder','totCdioBuildingCapacity','totCdioDecisionMaking','totCdioManagingEffectiveWorkplace','totCdioCommunication'));
+        return view('cdio.Assessments.Management.page09',compact('totCdioSelfDevelopment','totCdioTeamwork','totCdioHumanResource','totCdioStakeholder','totCdioBuildingCapacity','totCdioDecisionMaking','totCdioManagingEffectiveWorkplace','totCdioCommunication'));
     }
 
     public function storeCdioCommunication(Request $request){
@@ -970,7 +970,7 @@ class CdioController extends Controller
         $cdioSelfDevelopment=$govofficial->cdioSelfDevelopment;
         $cdioDigitalTransformation=$govofficial->cdioDigitalTransformation;
 
-        return view('cdio.assessments.Management.result',compact('cdioHumanResource','avgCommunication','avgManagingEffectiveWorkplace','avgDecisionMaking','avgBuildingCapacity','avgStakeholder','avgHumanResource','avgTeamwork','avgSelfDevelopment','avgDigitalTransformation','cdioCommunication','cdioManagingEffectiveWorkplace','cdioDecisionMaking','cdioBuildingCapacity','cdioStakeholder','cdioTeamwork','cdioSelfDevelopment','cdioDigitalTransformation','result'));
+        return view('cdio.Assessments.Management.result',compact('cdioHumanResource','avgCommunication','avgManagingEffectiveWorkplace','avgDecisionMaking','avgBuildingCapacity','avgStakeholder','avgHumanResource','avgTeamwork','avgSelfDevelopment','avgDigitalTransformation','cdioCommunication','cdioManagingEffectiveWorkplace','cdioDecisionMaking','cdioBuildingCapacity','cdioStakeholder','cdioTeamwork','cdioSelfDevelopment','cdioDigitalTransformation','result'));
     }
 
     public function cdioManagementReport(){
@@ -1037,7 +1037,7 @@ class CdioController extends Controller
         $cdioSelfDevelopment=$govofficial->cdioSelfDevelopment;
         $cdioDigitalTransformation=$govofficial->cdioDigitalTransformation;
 
-        return view('cdio.assessments.Management.report',compact('govofficial','cdioHumanResource','avgCommunication','avgManagingEffectiveWorkplace','avgDecisionMaking','avgBuildingCapacity','avgStakeholder','avgHumanResource','avgTeamwork','avgSelfDevelopment','avgDigitalTransformation','cdioCommunication','cdioManagingEffectiveWorkplace','cdioDecisionMaking','cdioBuildingCapacity','cdioStakeholder','cdioTeamwork','cdioSelfDevelopment','cdioDigitalTransformation','result'));
+        return view('cdio.Assessments.Management.report',compact('govofficial','cdioHumanResource','avgCommunication','avgManagingEffectiveWorkplace','avgDecisionMaking','avgBuildingCapacity','avgStakeholder','avgHumanResource','avgTeamwork','avgSelfDevelopment','avgDigitalTransformation','cdioCommunication','cdioManagingEffectiveWorkplace','cdioDecisionMaking','cdioBuildingCapacity','cdioStakeholder','cdioTeamwork','cdioSelfDevelopment','cdioDigitalTransformation','result'));
 
     }
 

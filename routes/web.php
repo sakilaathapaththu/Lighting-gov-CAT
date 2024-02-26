@@ -12,6 +12,10 @@ use App\Http\Controllers\DeepAssessmentController;
 use App\Http\Controllers\OperationalLayerController;
 
 
+// adding new test 
+use Dompdf\Dompdf;
+use Dompdf\Options;
+
 
 /*
 
@@ -168,6 +172,13 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/top/ict/result', [TopLayerController::class, 'topIctResult'])->name('topIctResult');
     Route::get('/top/ict/report', [TopLayerController::class, 'topIctReport'])->name('topIctReport');
 
+//
+// Route::get('/download-pdf', [TopLayerController::class, 'downloadPdf'])->name('download.pdf');
+
+
+
+
+
     Route::get('/top/digitalgovernment/page01', [TopLayerController::class, 'topDigitalGovernmentPage01'])->name('topDigitalGovernmentPage01');
     Route::get('/top/digitalgovernment/page02', [TopLayerController::class, 'topDigitalGovernmentPage02'])->name('topDigitalGovernmentPage02');
     Route::get('/top/digitalgovernment/page03', [TopLayerController::class, 'topDigitalGovernmentPage03'])->name('topDigitalGovernmentPage03');
@@ -206,6 +217,10 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/top/mgt/result', [TopLayerController::class, 'topManagementResult'])->name('topManagementResult');
     Route::get('/top/mgt/report', [TopLayerController::class, 'topManagementReport'])->name('topManagementReport');
+
+
+    // Route::get('/generate-pdf', [TopLayerController::class, 'topManagementReport'])->name('generatePdf');
+
 
     Route::get('/top/overallResults', [TopLayerController::class, 'overalresult'])->name('topOverallResults');
     Route::get('/top/overallReport', [TopLayerController::class, 'overalreport'])->name('topOverallReport');
@@ -363,4 +378,7 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
 });
+
+
+
 
